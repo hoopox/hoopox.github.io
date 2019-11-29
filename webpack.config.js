@@ -12,7 +12,7 @@ var moduleExports = {
     },
     output: {
         path: __dirname + "/dist",
-        filename: "[name].[chunkhash:5].js"
+        filename: "[name].bundle.js"
     },
     module: {
         loaders: [
