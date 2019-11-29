@@ -1,0 +1,44 @@
+name: Pages
+
+on: 
+  push:
+    branches: 
+      - gh-pages
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@v1
+      with:
+        ref: gh-pages
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm install, build
+      run: |
+        npm ci
+        npm run dist
+      env:
+        CI: true
+    - name: branch master
+      uses: actions/checkout@v1
+      with:
+        ref: master
+    - name: cp file
+      run: |
+        cp -r dist/* ./
+        git add .
+    - name: commit
+      uses: github-actions-x/commit@v2.1
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        push-branch: 'master'
+        commit-message: 'website update'
+        force-add: 'true'
