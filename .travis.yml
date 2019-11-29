@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - 10
+notifications:
+  email: false
+git:
+  depth: false  
+branches:
+  only:
+  - gh-pages
+cache: yarn  
+install: yarn
+script:
+  - yarn run dist
+  - git checkout master
+  - cp -r ./dist/* ./
+  - bash ./build.sh
