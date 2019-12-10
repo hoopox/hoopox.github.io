@@ -4,14 +4,15 @@ node_js:
 notifications:
   email: false
 git:
-  depth: false  
+  depth: false
 branches:
   only:
   - gh-pages
-cache: yarn  
+cache: yarn
 install: yarn
 script:
   - yarn run dist
+  - node scripts/sitemap.js
   - git checkout master
   - cp -r ./dist/* ./
   - bash ./build.sh
