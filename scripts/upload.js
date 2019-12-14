@@ -31,7 +31,7 @@ function uploadFile(fileName, filePath, mimeType) {
             throw respErr;
         }
         if (+respInfo.statusCode === 200) {
-            console.log(respBody);
+            console.log(respBody.key);
         } else {
             console.log(respInfo.statusCode);
             console.log(respBody);
@@ -42,6 +42,7 @@ function uploadFile(fileName, filePath, mimeType) {
 glob.sync(path.resolve('./dist/**/*\.*')).forEach(filePath => {
     const fileName = filePath.split('dist/')[1];
     const mimeType = mime.lookup(fileName);
+    console.log(`start upload ${fileName}`);
     uploadFile(fileName, filePath, mimeType);
 });
 
