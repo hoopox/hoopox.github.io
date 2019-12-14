@@ -12,7 +12,9 @@ cache: yarn
 install: yarn
 script:
   - yarn run dist
+  - cp robots.txt ./dist/
   - node scripts/sitemap.js
+  - node scripts/upload.js ${qiniu_sk}
   - git checkout master
   - cp -r ./dist/* ./
   - bash ./build.sh
