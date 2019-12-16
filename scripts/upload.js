@@ -31,10 +31,9 @@ function uploadFile(fileName, filePath, mimeType) {
             throw respErr;
         }
         if (+respInfo.statusCode === 200) {
-            console.log(respBody.key);
+            console.log('success', respBody.key);
         } else {
-            console.log(respInfo.statusCode);
-            console.log(respBody);
+            console.log('fail', respBody);
         }
     });
 }

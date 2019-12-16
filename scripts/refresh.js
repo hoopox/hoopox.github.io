@@ -46,11 +46,11 @@ function fetch(files) {
 
 async function init() {
     for (let i = 0; i < files.length; i += 50) {
-        console.log(`start fetch from ${i} to ${i + 50}`);
-        fetch(files.slice(i, i + 50));
-        await new Promise(resolve => {
-            setTimeout(resolve, 30000);
-        });
+        // console.log(`start fetch from ${i} to ${i + 50}`);
+        // fetch(files.slice(i, i + 50));
+        // await new Promise(resolve => {
+        //     setTimeout(resolve, 30000);
+        // });
         console.log(`start refresh from ${i} to ${i + 50}`);
         refresh(files.slice(i, i + 50));
         await new Promise(resolve => {
