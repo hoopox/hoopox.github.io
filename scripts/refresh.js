@@ -6,7 +6,7 @@ const qiniu = require('qiniu');
 const glob = require('glob');
 
 const accessKey = 'VnCf8Joh4WN089Kg-HjK5dnSnwYYB8sdOi7DGc3z';
-const secretKey = process.argv[2];;
+const secretKey = process.argv[2];
 
 const mac = new qiniu.auth.digest.Mac(accessKey, secretKey);
 const cdnManager = new qiniu.cdn.CdnManager(mac);
