@@ -130,8 +130,8 @@ h3 {
   padding-bottom: 4px;
 }
 
-.padding-small {
-}
+/* .padding-small {
+} */
 
 .padding-small-top {
   padding-top: 10px;
@@ -648,10 +648,10 @@ ul.sub-menu {
     padding-top: 70px;
   }
 
-  #about .container .col-sm-6 p.index-desc:nth-child(3),p.index-desc:nth-child(4) {
+  #about .container .col-sm-6 p.index-desc:nth-child(3),
+  p.index-desc:nth-child(4) {
     padding-top: 20px;
   }
-
 }
 
 @media only screen and (max-width: 768px) {
@@ -768,6 +768,89 @@ ul.sub-menu {
   font-weight: 500;
 }
 
+#progress .container{
+  color: #6A6A6A;
+  padding-top: 64px;
+  font-size:13px;
+  font-family:PingFang SC;
+  color:rgba(106,106,106,1);
+  line-height:22px;
+}
+
+#progress .container i {
+  position: absolute;
+  top: 0;
+  left: -5px;
+  display: block;
+  width:10px;
+  height:10px;
+  background:rgba(106,106,106,1);
+  border-radius:50%;
+}
+
+#progress .container .circle-two {
+  top: 128px;
+}
+
+#progress .container .circle-three {
+  top: 434px;
+}
+
+#progress .container .one {
+  margin-bottom: 50px;
+}
+
+#progress .container .col-sm-6 {
+  border-left: 1px solid #6A6A6A;
+  padding-left: 30px;
+}
+
+.pull-left {
+  float: left !important;
+  height: 40px;
+}
+
+.clearfix:after,.clearfix:before{
+  content: "";
+  display: table;
+}
+.clearfix:after{
+  clear: both;
+}
+.clearfix{
+  *zoom: 1;
+}
+
+#progress .container .year {
+  font-size:25px;
+  font-family:PingFang SC;
+  font-weight:bold;
+  color:rgba(106,106,106,1);
+  line-height:22px;
+  margin-bottom: 30px;
+}
+
+#progress .container .mb20 {
+  margin-bottom: 20px;
+}
+
+#progress .container .mr7 {
+  margin-right: 7px;
+}
+
+#progress .container strong,.bold {
+  font-size:13px;
+  font-family:PingFang SC;
+  font-weight:bold;
+  color:rgba(0,0,0,1);
+  line-height:22px;
+  margin-right: 11px;
+}
+
+#progress .container .col-sm-6:last-child .ml30{
+  margin-left: 30px;
+}
+
 #clients {
   padding-bottom: 45px;
 }
@@ -875,8 +958,8 @@ ul.sub-menu {
   position: relative;
 }
 
-.person-thumb img {
-}
+/* .person-thumb img {
+} */
 
 .social-profile {
   background: none repeat scroll 0 0 rgba(137, 97, 46, 0.8);
@@ -1809,8 +1892,8 @@ Blog with right sidebar
 Blog with right sidebar
 *****************************/
 
-.masonery_area .single-blog {
-}
+/* .masonery_area .single-blog {
+} */
 .masonery_area .single-blog .post-thumb {
   height: auto;
 }
