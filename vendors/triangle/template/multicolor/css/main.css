@@ -899,6 +899,49 @@ ul.sub-menu {
   margin-bottom: 10px;
 }
 
+#clients-baas {
+  padding: 45px 0;
+}
+#clients-baas .cloud-service img {
+  width: 180px;
+  height: 180px;
+}
+
+#clients-baas.applications .clients-logo > div {
+  margin-bottom: 20px;
+}
+
+#clients-baas.applications .clients-logo > div img {
+  height: 80px;
+}
+
+#clients-baas.members .clients-logo img {
+  height: 60px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 768px) {
+  #clients-baas.members .clients-logo img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  #clients-baas.members .clients-logo .col-md-4:last-child img {
+   margin-top: 15px;
+   margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #clients-baas.members .clients-logo img {
+    margin-bottom: 30px;
+  }
+
+  #clients-baas.members .clients-logo .col-md-4:last-child img {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
 /*************************
 *******About Us Page******
 **************************/
