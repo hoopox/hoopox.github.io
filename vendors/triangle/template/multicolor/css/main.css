@@ -574,7 +574,7 @@ ul.sub-menu {
 *******Home Page******
 **************************/
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 375px) {
   #home-slider .container .title-two {
     font-size: 17px;
   }
