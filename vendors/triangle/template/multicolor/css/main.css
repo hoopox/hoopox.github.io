@@ -575,7 +575,7 @@ ul.sub-menu {
 **************************/
 
 @media only screen and (max-width: 768px) {
-  #home-slider .container .fz17 {
+  #home-slider .container .title-two {
     font-size: 17px;
   }
 }
