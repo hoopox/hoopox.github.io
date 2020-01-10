@@ -574,9 +574,12 @@ ul.sub-menu {
 *******Home Page******
 **************************/
 
-#home-slider .container .fz17 {
-  font-size: 17px;
+@media only screen and (max-width: 768px) {
+  #home-slider .container .fz17 {
+    font-size: 17px;
+  }
 }
+
 
 #home-slider .preloader {
   position: absolute;
