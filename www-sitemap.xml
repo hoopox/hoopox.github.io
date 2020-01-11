@@ -5,22 +5,22 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
         <loc>https://hoopox.com/</loc>
-        <lastmod>2020-01-10T12:17:34+00:00</lastmod>
+        <lastmod>2020-01-11T02:31:39+00:00</lastmod>
         <priority>1.00</priority>
     </url>
     <url>
         <loc>https://hoopox.com/solutions-blockchain.html</loc>
-        <lastmod>2020-01-10T12:17:34+00:00</lastmod>
+        <lastmod>2020-01-11T02:31:39+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://hoopox.com/solutions-baas.html</loc>
-        <lastmod>2020-01-10T12:17:34+00:00</lastmod>
+        <lastmod>2020-01-11T02:31:39+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://hoopox.com/qualification-index.html</loc>
-        <lastmod>2020-01-10T12:17:34+00:00</lastmod>
+        <lastmod>2020-01-11T02:31:39+00:00</lastmod>
         <priority>0.80</priority>
     </url>
 </urlset>
