@@ -2,6 +2,7 @@ var moduleExports = function(content, args) {
     var layout = require('./layout.ejs');
     var header = require('./header.ejs');
     var footer = require('./footer.ejs');
+    var popup = require('../readmove/popup.ejs');
     args = args ? args : {};
 
     return function(params) {
@@ -13,6 +14,7 @@ var moduleExports = function(content, args) {
             header: header(params),
             content: content(params),
             footer: footer(params),
+            popup: popup(params),
         };
         // console.log(params.compilation);
         return layout(params);

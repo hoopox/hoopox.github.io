@@ -1,3 +1,5 @@
+var popupEvent = require('./popup.js');
+
 jQuery(function($) {'use strict';
 
 	//Responsive Nav
@@ -108,6 +110,8 @@ jQuery(function($) {'use strict';
 			horizontalAlign: 'center',
 			backgroundColor: '#3e8bff',
 		});
-	}
-
+  }
+  
+  $('#read-move-popup').on('show.bs.modal',popupEvent.init)
+  $('#read-move-popup').on('hidden.bs.modal',popupEvent.destory)
 });
