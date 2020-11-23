@@ -10,10 +10,7 @@ function initPopupModal() {
   form.on('submit', function (e) {
     e.preventDefault();
     var fieldsResult = submitValidate();
-    if (!canSubmit(fieldsResult)) {
-      var formData = getFormEnterData();
-      handleDataInteraction(formData);
-    }
+    canSubmit(fieldsResult) ? validateFailed() : validateSuccess();
   });
 }
 // the modal hidden will execute
@@ -21,7 +18,16 @@ function destoryPopupModal() {
   form.off('submit');
 }
 
-// control the submit 
+function validateFailed() {
+  $('#read-move-popup').animate({ scrollTop: '0px' }, 600);
+}
+
+function validateSuccess() {
+  var formData = getFormEnterData();
+  handleDataInteraction(formData);
+}
+
+// control the submit
 function canSubmit(fields) {
   return fields.filter(function (item) {
     return !item.isPass;
@@ -32,7 +38,6 @@ function canSubmit(fields) {
 function getFormEnterData() {
   let data = {};
   $.each(form.serializeArray(), function (index, item) {
-    console.log(item);
     let isHave = data[item.name];
     if (isHave) {
       if (isHave instanceof Array) {
@@ -50,7 +55,6 @@ function getFormEnterData() {
 
 // here send ajax
 function handleDataInteraction(data) {
-  console.log(data);
   $.ajax({
     url: 'https://jinshuju.net/api/v1/forms/eS45UG',
     type: 'POST',
@@ -73,7 +77,7 @@ function handleDataInteraction(data) {
 }
 // ajax success callback
 function successCallback(data) {
-  alterMessage('.alert-success');
+  alterMessage('.alert-success',1000);
   // make the animate done,the page closed
   setTimeout(() => {
     $('.close').click();
@@ -90,14 +94,14 @@ function resetStatus() {
 // ajax failed callback
 function errorCallback(e) {
   try {
-    alterMessage('.alert-danger');
+    alterMessage('.alert-danger',3000);
   } catch (error) {
     console.log(error);
   }
 }
 
 // control the message when click submit button
-function alterMessage(triggerClass) {
+function alterMessage(triggerClass,delay) {
   // get the alter position
   var position =
     $('#read-move-popup').scrollTop() -
@@ -106,7 +110,7 @@ function alterMessage(triggerClass) {
   $(triggerClass)
     .animate({ top: `${position}px` })
     .show()
-    .delay(1000)
+    .delay(delay)
     .hide(300);
 }
 
@@ -146,7 +150,7 @@ function getValidateFields() {
       isPass: false,
     },
   ];
-};
+}
 // make the hint display
 function displayMessageElement(val, inputElement) {
   var baseClass = 'hite-message';
