@@ -44,6 +44,7 @@
                     </ul>
                 </li>
                 <li><a href="qualification-index.html">企业资质</a></li>
+                <li data-toggle="modal" data-target="#read-move-popup"><a href="javascript:void(0)">了解更多</a></li>
                 <li><a href="mailto:contact@hoopox.com" target="_blank" rel="noopener noreferrer">联系我们 </a></li>
             </ul>
         </div>
@@ -300,6 +301,224 @@
 <!--/#footer-->
 
 <script src="post.bundle.js" charset="utf-8"></script>
+
+    <div
+  class="modal fade"
+  id="read-move-popup"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document" style="position: relative">
+    <div class="alert alert-success custom-alter" role="alert">提交成功</div>
+    <div class="alert alert-danger custom-alter" role="alert">提交失败，请刷新页面后重试，或直接与我们联系</div>
+    <div class="modal-content custom-modal-content">
+      <div class="modal-header">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="popup-form" role="form">
+          <div class="title">
+            <article class="title-content">想要获取产品功能，咨询报价等更多信息，</article>
+            <article class="title-content">
+              请填写下方资料，我们会安排工作人员尽快与您联系。
+            </article>
+          </div>
+          <div class="form-group">
+            <div class="hite-message-content">
+              <label for="name">1、姓名</label>
+              <span class="hite-message">*请填写姓名</span>
+            </div>
+            <input
+              type="text"
+              id="name"
+              name="field_1"
+              class="form-control custom-input"
+              autocomplete="off"
+            />
+          </div>
+          <div class="form-group">
+            <div class="hite-message-content">
+              <label for="company">2、公司/单位</label>
+              <span class="hite-message">*请填写公司名称</span>
+            </div>
+            <input
+              type="text"
+              id="company"
+              name="field_2"
+              class="form-control custom-input"
+              autocomplete="off"
+            />
+          </div>
+          <div class="form-group">
+            <div class="hite-message-content">
+              <label for="email">3、邮箱地址</label>
+              <span class="hite-message">*请填写邮箱地址或电话</span>
+            </div>
+            <input
+              type="email"
+              name="field_7"
+              id="email"
+              class="form-control custom-input"
+            />
+          </div>
+          <div class="form-group">
+            <label for="telephone">4、电话</label>
+            <input
+              type="tel"
+              name="field_9"
+              id="telephone"
+              class="form-control custom-input"
+              autocomplete="off"
+            />
+          </div>
+          <div class="form-group custom-font-weight-label">
+            <label>5、您对区块链应用的哪些地方比较感兴趣</label>
+            <div class="form-check">
+              <input
+                type="checkbox"
+                id="solution"
+                name="field_4"
+                value="5GLT"
+                class="form-check-input"
+              />
+              <label for="solution" class="form-check-label custom-label"
+                >A. 解决方案</label
+              >
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" id="product" value="2JeQ" name="field_4" />
+              <label for="product">B. 产品优势</label>
+            </div>
+
+            <div>
+              <input
+                type="checkbox"
+                id="industry"
+                value="yfSQ"
+                name="field_4"
+              />
+              <label for="industry">C. 行业应用场景</label>
+            </div>
+          </div>
+          <div class="form-group custom-font-weight-label">
+            <label>6、您之前是否了解过区块链</label>
+            <div>
+              <input
+                type="radio"
+                id="incomprehend"
+                value="8005"
+                name="field_8"
+              />
+              <label for="incomprehend">A. 不了解</label>
+            </div>
+
+            <div>
+              <input type="radio" id="comprehend" value="aMA0" name="field_8" />
+              <label for="comprehend">B. 了解</label>
+            </div>
+
+            <div>
+              <input
+                type="radio"
+                id="comprehendAll"
+                value="ANQo"
+                name="field_8"
+              />
+              <label for="comprehendAll">C. 非常了解</label>
+            </div>
+          </div>
+          <div class="form-group custom-font-weight-label">
+            <label>7、您期望通过哪些形式与您进一步进行交流</label>
+            <div>
+              <input
+                type="checkbox"
+                id="sendEmali"
+                name="field_5"
+                value="snoR"
+              />
+              <label for="sendEmali">A. 发送资料到我的电子邮箱</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="phoneCall"
+                name="field_5"
+                value="HG9e"
+              />
+              <label for="phoneCall">B. 打电话给我做进一步交流</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="aspectant"
+                name="field_5"
+                value="VHOY"
+              />
+              <label for="aspectant">C. 面对面做进一步深入交流</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="trialProduct"
+                name="field_5"
+                value="LMsF"
+              />
+              <label for="trialProduct">D. 测试或者试用产品</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="noDemand"
+                name="field_5"
+                value="Vqze"
+              />
+              <label for="noDemand">E. 暂不需要</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="leaveMessage">8、如有其他需求，请留言</label>
+            <textarea
+              class="form-control custom-input"
+              style="resize: none"
+              rows="3"
+              name="field_6"
+            ></textarea>
+          </div>
+          <div style="display: flex; justify-content: center; margin-top: 30px">
+            <button class="btn btn-primary custom-btn-submit" type="submit">
+              提交
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .custom-modal-content {
+    margin: 100px 0 0 0;
+  }
+  .modal-backdrop.in {
+    opacity: 0.1;
+  }
+  @media only screen and (min-width: 768px) {
+    .custom-modal-content {
+      margin: 150px 0 0 0;
+    }
+    .modal-backdrop.in {
+      opacity: 0.5;
+    }
+  }
+</style>
 
     
     <script>
